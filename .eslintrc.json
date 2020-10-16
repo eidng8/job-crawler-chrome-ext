@@ -1,0 +1,52 @@
+{
+  "root": true,
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaVersion": 6,
+    "sourceType": "module"
+  },
+  "extends": ["eslint:recommended", "prettier", "prettier/@typescript-eslint"],
+  "rules": {
+    "eqeqeq": "off",
+    "semi": "error",
+    "yoda": [
+      "error",
+      "always",
+      {
+        "onlyEquality": true
+      }
+    ]
+  },
+  "overrides": [
+    {
+      "files": ["webpack.config.js", "utils/**/*.js"],
+      "env": {
+        "node": true
+      }
+    },
+    {
+      "files": ["src/**/*.js"],
+      "env": {
+        "browser": true
+      }
+    },
+    {
+      "files": ["*.ts"],
+      "plugins": ["@typescript-eslint"],
+      "extends": [
+        "eslint:recommended",
+        "plugin:@typescript-eslint/recommended",
+        "prettier",
+        "prettier/@typescript-eslint"
+      ],
+      "rules": {
+        "@typescript-eslint/explicit-function-return-type": [
+          "error",
+          {
+            "allowExpressions": true
+          }
+        ]
+      }
+    }
+  ]
+}

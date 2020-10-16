@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="JavaScriptLibraryMappings">
+    <file url="file://$PROJECT_DIR$" libraries="{job-crawler/node_modules}" />
+    <file url="file://$PROJECT_DIR$/src" libraries="{@types/chrome, HTML, job-crawler/node_modules}" />
+    <file url="file://$PROJECT_DIR$/utils" libraries="{job-crawler/node_modules}" />
+    <file url="file://$PROJECT_DIR$/webpack.config.js" libraries="{job-crawler/node_modules}" />
+    <file url="PROJECT" libraries="{HTML}" />
+    <includedPredefinedLibrary name="Node.js Core" />
+  </component>
+</project>

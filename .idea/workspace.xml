@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="98deda6c-3dc4-41a8-be80-248d2c7a1cd7" name="Default Changelist" comment="init commit">
+      <change afterPath="$PROJECT_DIR$/.eslintignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.eslintrc.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/copyright/GPLv3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/copyright/profiles_settings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/job-crawler.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/jsLinters/eslint.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/prettier.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.prettierrc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LICENSE.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/global.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/background.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/css/options.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/css/popup.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/img/icon-128.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/img/icon-34.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/js/background.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/js/background/monitor.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/js/content.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/js/content/51job/list-crawler-51job.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/js/content/brood.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/js/content/list-crawler.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/js/content/utils.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/js/locales/texts.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/js/options.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/js/popup.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/js/popup/popup.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/js/shared/messaging.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/js/types/messages.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/js/types/states.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/manifest.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/options.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/popup.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tsconfig.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/build.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/env.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/webserver.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webpack.config.js" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings">
+    <execution />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GithubDefaultAccount">
+    <option name="defaultAccountId" value="2c3b2f43-67c9-4ba5-b6a4-db6bbe89f24a" />
+  </component>
+  <component name="JsFlowSettings">
+    <service-enabled>true</service-enabled>
+    <exe-path />
+    <other-services-enabled>true</other-services-enabled>
+    <auto-save>true</auto-save>
+  </component>
+  <component name="ProjectId" id="1iwpablHxO9mhKqMEz1UbRvVlaM" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="autoscrollFromSource" value="true" />
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="javascript.nodejs.core.library.configured.version" value="12.14.1" />
+    <property name="javascript.nodejs.core.library.typings.version" value="12.12.67" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/webpack.config.js" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.standard" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.standard" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.standard" value="" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="prettier.files.pattern" value="{**/*,*}.{js,ts,jsx,tsx,htm,html,json}" />
+    <property name="prettierjs.PrettierConfiguration.Package" value="D:\Trials\JS\chrome\extension\job-crawler\node_modules\prettier" />
+    <property name="run.prettier.on.save" value="true" />
+    <property name="settings.editor.selected.configurable" value="reference.settings.ide.settings.spelling" />
+    <property name="ts.external.directory.path" value="D:\Trials\JS\chrome\extension\job-crawler\node_modules\typescript\lib" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="98deda6c-3dc4-41a8-be80-248d2c7a1cd7" name="Default Changelist" comment="" />
+      <created>1602828574390</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1602828574390</updated>
+      <workItem from="1602828576157" duration="2011000" />
+    </task>
+    <servers>
+      <GitHub url="https://github.com">
+        <option name="repoAuthor" value="eidng8" />
+        <option name="repoName" value="job-crawler-chrome-ext" />
+        <option name="useProxy" value="true" />
+      </GitHub>
+    </servers>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="UpdateCopyrightCheckinHandler">
+    <option name="UPDATE_COPYRIGHT" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="CHECK_CODE_CLEANUP_BEFORE_PROJECT_COMMIT" value="true" />
+    <MESSAGE value="init commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="init commit" />
+    <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
+    <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="731" y="257" key="#HTTP_Proxy" timestamp="1602829422705">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="731" y="257" key="#HTTP_Proxy/0.0.1920.1080@0.0.1920.1080" timestamp="1602829422705" />
+    <state x="586" y="218" width="1149" height="644" key="#Inspections" timestamp="1602830604769">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="586" y="218" width="1149" height="644" key="#Inspections/0.0.1920.1080@0.0.1920.1080" timestamp="1602830604769" />
+    <state x="755" y="405" key="#Usage_Scope" timestamp="1602828785049">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="755" y="405" key="#Usage_Scope/0.0.1920.1080@0.0.1920.1080" timestamp="1602828785049" />
+    <state x="690" y="319" key="#com.intellij.ide.scriptingContext.ui.PerFileMappingsDialogWrapper" timestamp="1602828824796">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="690" y="319" key="#com.intellij.ide.scriptingContext.ui.PerFileMappingsDialogWrapper/0.0.1920.1080@0.0.1920.1080" timestamp="1602828824796" />
+    <state x="703" y="402" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1" timestamp="1602829781428">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="703" y="402" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.0.1920.1080@0.0.1920.1080" timestamp="1602829781428" />
+    <state x="90" y="68" width="1752" height="933" key="CommitChangelistDialog2" timestamp="1602830433562">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="90" y="68" width="1752" height="933" key="CommitChangelistDialog2/0.0.1920.1080@0.0.1920.1080" timestamp="1602830433562" />
+    <state x="740" y="294" key="FileChooserDialogImpl" timestamp="1602828816547">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="740" y="294" key="FileChooserDialogImpl/0.0.1920.1080@0.0.1920.1080" timestamp="1602828816547" />
+    <state x="461" y="184" key="SettingsEditor" timestamp="1602829763173">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="461" y="184" key="SettingsEditor/0.0.1920.1080@0.0.1920.1080" timestamp="1602829763173" />
+    <state x="761" y="446" key="git4idea.remote.GitConfigureRemotesDialog" timestamp="1602829074850">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="761" y="446" key="git4idea.remote.GitConfigureRemotesDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1602829074850" />
+  </component>
+</project>
