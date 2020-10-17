@@ -115,8 +115,17 @@ export default class Monitor {
     Monitor.broadcastStateChanged();
   }
 
+  /**
+   * Close the calling tab.
+   * @param tab
+   * @param callback
+   * @private
+   */
   private static closeTab(tab: chrome.tabs.Tab, callback?: ICallback): void {
-    chrome.tabs.remove(tab.id, callback);
+    chrome.tabs.remove(tab.id, () => {
+      Monitor.broadcastTabClosed(tab);
+      if (callback) callback();
+    });
   }
 
   //endregion
@@ -131,6 +140,15 @@ export default class Monitor {
       type: MessageType.stateChanged,
       payload: Monitor.state,
     } as IStateChangedCommand);
+  }
+
+  /**
+   * Notifies all open tabs that there was a tab being closed.
+   * @param tab
+   * @private
+   */
+  private static broadcastTabClosed(tab: chrome.tabs.Tab): void {
+    Monitor.broadcastToAllTabs({ type: MessageType.tabClosed, payload: tab });
   }
 
   /**

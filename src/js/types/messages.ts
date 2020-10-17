@@ -13,7 +13,8 @@ export type ICommand =
   | IGetStateCommand
   | ISetStateCommand
   | IStateChangedCommand
-  | ICloseTabCommand;
+  | ICloseTabCommand
+  | ITabClosedCommand;
 
 /**
  * All command callback function types
@@ -23,6 +24,9 @@ export type ICommandCallback =
   | IGetStateCallback
   | ISetStateCallback;
 
+/**
+ * Generic command response
+ */
 export interface ICommandResponse {
   /**
    * `true` if the command was executed successfully, otherwise `false`.
@@ -30,6 +34,9 @@ export interface ICommandResponse {
   success: boolean;
 }
 
+/**
+ * Generic command callback function
+ */
 export interface ICallback {
   (): void;
 }
@@ -104,9 +111,21 @@ export interface ICloseTabCommand {
   type: MessageType.closeTab;
 }
 
+/**
+ * Signals there was a tab being closed.
+ */
+export interface ITabClosedCommand {
+  type: MessageType.tabClosed;
+  payload: chrome.tabs.Tab;
+}
+
+/**
+ * List of all message (command) types
+ */
 export const enum MessageType {
   getState = 'get-state',
   setState = 'set-state',
   stateChanged = 'state-changed',
   closeTab = 'close-tab',
+  tabClosed = 'tab-closed',
 }

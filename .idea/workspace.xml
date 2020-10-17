@@ -1,19 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="98deda6c-3dc4-41a8-be80-248d2c7a1cd7" name="Default Changelist" comment="init commit">
-      <change afterPath="$PROJECT_DIR$/.idea/dictionaries/JC.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/js/content/51job/page-crawler-51job.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/js/content/base-crawler.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/js/content/page-crawler.ts" afterDir="false" />
+    <list default="true" id="98deda6c-3dc4-41a8-be80-248d2c7a1cd7" name="Default Changelist" comment="add base-crawler.ts, page-crawler.ts, and 'close-tab' command">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/js/background/monitor.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/js/background/monitor.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/js/content/51job/list-crawler-51job.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/js/content/51job/list-crawler-51job.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/js/content/brood.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/js/content/brood.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/js/content/list-crawler.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/js/content/list-crawler.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/js/shared/messaging.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/js/shared/messaging.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/js/types/messages.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/js/types/messages.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/manifest.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,9 +41,6 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-  </component>
-  <component name="GithubDefaultAccount">
-    <option name="defaultAccountId" value="2c3b2f43-67c9-4ba5-b6a4-db6bbe89f24a" />
   </component>
   <component name="JsFlowSettings">
     <service-enabled>true</service-enabled>
@@ -82,6 +88,14 @@
       <updated>1602828574390</updated>
       <workItem from="1602828576157" duration="2011000" />
     </task>
+    <task id="LOCAL-00001" summary="add base-crawler.ts, page-crawler.ts, and 'close-tab' command">
+      <created>1602947357861</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1602947357861</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers>
       <GitHub url="https://github.com">
         <option name="repoAuthor" value="eidng8" />
@@ -96,10 +110,22 @@
   <component name="UpdateCopyrightCheckinHandler">
     <option name="UPDATE_COPYRIGHT" value="true" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_CLEANUP_BEFORE_PROJECT_COMMIT" value="true" />
     <MESSAGE value="init commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="init commit" />
+    <MESSAGE value="add base-crawler.ts, page-crawler.ts, and 'close-tab' command" />
+    <option name="LAST_COMMIT_MESSAGE" value="add base-crawler.ts, page-crawler.ts, and 'close-tab' command" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
@@ -128,10 +154,10 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="703" y="402" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.0.1920.1080@0.0.1920.1080" timestamp="1602829781428" />
-    <state x="90" y="68" width="1752" height="933" key="CommitChangelistDialog2" timestamp="1602938777774">
+    <state x="90" y="68" width="1752" height="933" key="CommitChangelistDialog2" timestamp="1602947490186">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="90" y="68" width="1752" height="933" key="CommitChangelistDialog2/0.0.1920.1080@0.0.1920.1080" timestamp="1602938777774" />
+    <state x="90" y="68" width="1752" height="933" key="CommitChangelistDialog2/0.0.1920.1080@0.0.1920.1080" timestamp="1602947490186" />
     <state x="740" y="294" key="FileChooserDialogImpl" timestamp="1602938484795">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
@@ -140,13 +166,21 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="461" y="184" key="SettingsEditor/0.0.1920.1080@0.0.1920.1080" timestamp="1602946343460" />
+    <state x="552" y="272" key="Vcs.Push.Dialog.v2" timestamp="1602947363122">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="552" y="272" key="Vcs.Push.Dialog.v2/0.0.1920.1080@0.0.1920.1080" timestamp="1602947363122" />
+    <state x="236" y="83" width="1414" height="915" key="find.popup" timestamp="1602947240625">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="236" y="83" width="1414" height="915" key="find.popup/0.0.1920.1080@0.0.1920.1080" timestamp="1602947240625" />
     <state x="761" y="446" key="git4idea.remote.GitConfigureRemotesDialog" timestamp="1602829074850">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="761" y="446" key="git4idea.remote.GitConfigureRemotesDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1602829074850" />
-    <state x="623" y="235" width="672" height="678" key="search.everywhere.popup" timestamp="1602943266038">
+    <state x="623" y="235" width="672" height="678" key="search.everywhere.popup" timestamp="1602947461016">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="623" y="235" width="672" height="678" key="search.everywhere.popup/0.0.1920.1080@0.0.1920.1080" timestamp="1602943266038" />
+    <state x="623" y="235" width="672" height="678" key="search.everywhere.popup/0.0.1920.1080@0.0.1920.1080" timestamp="1602947461016" />
   </component>
 </project>
