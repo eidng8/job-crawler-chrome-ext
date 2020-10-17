@@ -6,6 +6,7 @@
 
 import { IState } from '../types/states';
 import {
+  ICallback,
   ICommand,
   ICommandCallback,
   IGetStateCallback,
@@ -13,6 +14,7 @@ import {
   IStateChangedCommand,
   MessageType,
 } from '../types/messages';
+import MessageSender = chrome.runtime.MessageSender;
 
 /**
  * The "master process" run in background, overseeing every crawling operation.
@@ -32,6 +34,7 @@ export default class Monitor {
    */
   private static state: IState = { crawling: false };
 
+  //region Initialization
   /**
    * Initializes the chrome extension.
    */
@@ -67,7 +70,11 @@ export default class Monitor {
    */
   private static registerMessages(): void {
     chrome.runtime.onMessage.addListener(
-      (command: ICommand, _, callback: ICommandCallback) => {
+      (
+        command: ICommand,
+        sender: MessageSender,
+        callback: ICommandCallback
+      ) => {
         switch (command.type) {
           case MessageType.getState:
             Monitor.getState(callback);
@@ -75,18 +82,24 @@ export default class Monitor {
           case MessageType.setState:
             Monitor.setState(command.payload, callback);
             break;
+          case MessageType.closeTab:
+            Monitor.closeTab(sender.tab, callback as ICallback);
+            break;
         }
       }
     );
   }
 
+  //endregion
+
+  //region Command handlers
   /**
    * Handles the {@link MessageType.getState} command.
    * @param callback
    * @private
    */
-  private static getState(callback: IGetStateCallback): void {
-    callback({ success: true, payload: Monitor.state });
+  private static getState(callback?: IGetStateCallback): void {
+    if (callback) callback({ success: true, payload: Monitor.state });
   }
 
   /**
@@ -95,13 +108,20 @@ export default class Monitor {
    * @param callback
    * @private
    */
-  private static setState(payload: IState, callback: ISetStateCallback): void {
+  private static setState(payload: IState, callback?: ISetStateCallback): void {
     if (Monitor.state === payload) return;
     Monitor.state = payload;
-    callback({ success: true, payload: Monitor.state });
+    if (callback) callback({ success: true, payload: Monitor.state });
     Monitor.broadcastStateChanged();
   }
 
+  private static closeTab(tab: chrome.tabs.Tab, callback?: ICallback): void {
+    chrome.tabs.remove(tab.id, callback);
+  }
+
+  //endregion
+
+  //region Command broadcasting
   /**
    * Broadcasts {@link MessageType.stateChanged} to all tabs.
    * @private
@@ -120,7 +140,7 @@ export default class Monitor {
    */
   private static broadcastToActiveTab(command: ICommand): void {
     chrome.tabs.query({ active: true, currentWindow: true }, tabs => {
-      chrome.tabs.sendMessage(tabs[0].id, command);
+      if (tabs[0]) chrome.tabs.sendMessage(tabs[0].id, command);
     });
   }
 
@@ -147,4 +167,6 @@ export default class Monitor {
     this.broadcastToActiveTab(command);
     this.broadcastToInactiveTabs(command);
   }
+
+  //endregion
 }

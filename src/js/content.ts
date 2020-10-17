@@ -4,9 +4,7 @@
  * Author: eidng8
  */
 
-console.log('crawler active.');
-
-console.log(window.location.hostname);
+console.info('Crawler is active.');
 
 import Brood from './content/brood';
 

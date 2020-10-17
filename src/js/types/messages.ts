@@ -12,17 +12,27 @@ import { IState } from './states';
 export type ICommand =
   | IGetStateCommand
   | ISetStateCommand
-  | IStateChangedCommand;
-
-/**
- * All command response types
- */
-export type ICommandResponse = IGetStateResponse | ISetStateResponse;
+  | IStateChangedCommand
+  | ICloseTabCommand;
 
 /**
  * All command callback function types
  */
-export type ICommandCallback = IGetStateCallback | ISetStateCallback;
+export type ICommandCallback =
+  | ICallback
+  | IGetStateCallback
+  | ISetStateCallback;
+
+export interface ICommandResponse {
+  /**
+   * `true` if the command was executed successfully, otherwise `false`.
+   */
+  success: boolean;
+}
+
+export interface ICallback {
+  (): void;
+}
 
 /**
  * Command to get {@link Monitor} state
@@ -34,8 +44,7 @@ export interface IGetStateCommand {
 /**
  * {@link Monitor} state query response
  */
-export interface IGetStateResponse {
-  success: boolean;
+export interface IGetStateResponse extends ICommandResponse {
   /**
    * Current {@link Monitor} state
    */
@@ -63,8 +72,7 @@ export interface ISetStateCommand {
 /**
  * {@link Monitor} state modification response
  */
-export interface ISetStateResponse {
-  success: boolean;
+export interface ISetStateResponse extends ICommandResponse {
   /**
    * The new {@link Monitor} state
    */
@@ -89,8 +97,16 @@ export interface IStateChangedCommand {
   payload: IState;
 }
 
+/**
+ * Command to close the sender's tab
+ */
+export interface ICloseTabCommand {
+  type: MessageType.closeTab;
+}
+
 export const enum MessageType {
   getState = 'get-state',
   setState = 'set-state',
   stateChanged = 'state-changed',
+  closeTab = 'close-tab',
 }

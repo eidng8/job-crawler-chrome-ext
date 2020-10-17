@@ -43,8 +43,6 @@ export default class Popup {
           this.setErrorMessage(Texts.cannotStart);
         });
     });
-    // noinspection TypeScriptUnresolvedVariable
-    chrome.extension.getBackgroundPage().console.log('popup initialized.');
   }
 
   /**

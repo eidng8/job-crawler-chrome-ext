@@ -4,10 +4,13 @@
  * Author: eidng8
  */
 
-import PageCrawler from '../list-crawler';
+import ListCrawler from '../list-crawler';
+import { ICommand } from '../../types/messages';
 
-export default class ListCrawler51Job extends PageCrawler {
+export default class ListCrawler51Job extends ListCrawler {
   protected listItems(): NodeListOf<HTMLAnchorElement> {
     return document.querySelectorAll<HTMLAnchorElement>('.j_joblist>.e>a');
   }
+
+  protected handleCommands(command: ICommand): void {}
 }

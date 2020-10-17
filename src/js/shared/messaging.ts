@@ -6,9 +6,12 @@
 
 import { IState } from '../types/states';
 import {
+  ICloseTabCommand,
   ICommandResponse,
   IGetStateCommand,
+  IGetStateResponse,
   ISetStateCommand,
+  ISetStateResponse,
   MessageType,
 } from '../types/messages';
 
@@ -26,21 +29,7 @@ export default class Messaging {
    * their own.
    */
   public static startCrawling(): Promise<IState> {
-    return new Promise<IState>((resolve, reject) => {
-      chrome.runtime.sendMessage(
-        {
-          type: MessageType.setState,
-          payload: { crawling: true },
-        } as ISetStateCommand,
-        (response: ICommandResponse) => {
-          if (response.success) {
-            resolve(response.payload);
-          } else {
-            reject(response);
-          }
-        }
-      );
-    });
+    return Messaging.setState({ crawling: true });
   }
 
   /**
@@ -51,21 +40,7 @@ export default class Messaging {
    * their own.
    */
   public static stopCrawling(): Promise<IState> {
-    return new Promise<IState>((resolve, reject) => {
-      chrome.runtime.sendMessage(
-        {
-          type: MessageType.setState,
-          payload: { crawling: false },
-        } as ISetStateCommand,
-        (response: ICommandResponse) => {
-          if (response.success) {
-            resolve(response.payload);
-          } else {
-            reject(response);
-          }
-        }
-      );
-    });
+    return Messaging.setState({ crawling: false });
   }
 
   /**
@@ -77,7 +52,43 @@ export default class Messaging {
     return new Promise<IState>((resolve, reject) => {
       chrome.runtime.sendMessage(
         { type: MessageType.getState } as IGetStateCommand,
+        (response: IGetStateResponse) => {
+          if (response.success) {
+            resolve(response.payload);
+          } else {
+            reject(response);
+          }
+        }
+      );
+    });
+  }
+
+  public static closeTab(): Promise<void> {
+    return new Promise<void>((resolve, reject) => {
+      chrome.runtime.sendMessage(
+        { type: MessageType.closeTab } as ICloseTabCommand,
         (response: ICommandResponse) => {
+          if (response.success) {
+            resolve();
+          } else {
+            reject(response);
+          }
+        }
+      );
+    });
+  }
+
+  /**
+   * Signals the {@link Monitor} to update its crawling state.
+   */
+  private static setState(state: IState): Promise<IState> {
+    return new Promise<IState>((resolve, reject) => {
+      chrome.runtime.sendMessage(
+        {
+          type: MessageType.setState,
+          payload: state,
+        } as ISetStateCommand,
+        (response: ISetStateResponse) => {
           if (response.success) {
             resolve(response.payload);
           } else {
