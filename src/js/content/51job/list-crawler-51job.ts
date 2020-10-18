@@ -5,12 +5,19 @@
  */
 
 import ListCrawler from '../list-crawler';
-import { ICommand } from '../../types/messages';
+import ListItem from '../list-item';
 
-export default class ListCrawler51Job extends ListCrawler {
-  protected listItems(): NodeListOf<HTMLAnchorElement> {
-    return document.querySelectorAll<HTMLAnchorElement>('.j_joblist>.e>a');
+export default class ListCrawler51Job extends ListCrawler<
+  HTMLAnchorElement,
+  ListItem<HTMLAnchorElement>
+> {
+  protected listItems(): ListItem<HTMLAnchorElement>[] {
+    const items = [] as ListItem<HTMLAnchorElement>[];
+    document
+      .querySelectorAll<HTMLAnchorElement>('.j_joblist>.e>a')
+      .forEach(a => {
+        items.push(new ListItem(a));
+      });
+    return items;
   }
-
-  protected handleCommands(command: ICommand): void {}
 }

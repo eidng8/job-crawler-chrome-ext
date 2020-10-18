@@ -156,9 +156,12 @@ export default class Monitor {
    * @param command
    * @private
    */
-  private static broadcastToActiveTab(command: ICommand): void {
-    chrome.tabs.query({ active: true, currentWindow: true }, tabs => {
-      if (tabs[0]) chrome.tabs.sendMessage(tabs[0].id, command);
+  private static broadcastToActiveTabs(command: ICommand): void {
+    chrome.tabs.query({ active: true }, tabs => {
+      for (const tab of tabs) {
+        chrome.tabs.sendMessage(tab.id, command);
+        console.log('messaged sent to active tabs', tab, command);
+      }
     });
   }
 
@@ -168,10 +171,10 @@ export default class Monitor {
    * @private
    */
   private static broadcastToInactiveTabs(command: ICommand): void {
-    chrome.tabs.query({ active: false, currentWindow: true }, tabs => {
-      const count = tabs.length;
-      for (let idx = 0; idx < count; idx++) {
-        chrome.tabs.sendMessage(tabs[idx].id, command);
+    chrome.tabs.query({ active: false }, tabs => {
+      for (const tab of tabs) {
+        chrome.tabs.sendMessage(tab.id, command);
+        console.log('messaged sent sent to inactive tabs', tab, command);
       }
     });
   }
@@ -182,7 +185,7 @@ export default class Monitor {
    * @private
    */
   private static broadcastToAllTabs(command: ICommand): void {
-    this.broadcastToActiveTab(command);
+    this.broadcastToActiveTabs(command);
     this.broadcastToInactiveTabs(command);
   }
 

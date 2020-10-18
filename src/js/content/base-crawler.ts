@@ -19,7 +19,7 @@ export default abstract class BaseCrawler {
   protected crawling = false;
 
   /**
-   * Process the page. All actual processing should occur here.
+   * Process the page. All actual processes should occur here.
    */
   public abstract crawl(): void;
 
@@ -35,13 +35,13 @@ export default abstract class BaseCrawler {
    * called in `window.onload` event.
    */
   public attach(): void {
-    chrome.runtime.onMessage.addListener(cmd => {
-      switch (cmd.type) {
+    chrome.runtime.onMessage.addListener(command => {
+      switch (command.type) {
         case MessageType.stateChanged:
-          this.onStateChanged(cmd.payload);
+          this.onStateChanged(command.payload);
           break;
         default:
-          this.handleCommands(cmd);
+          this.handleCommands(command);
       }
     });
     console.info('Crawler has been attached to current page.');
